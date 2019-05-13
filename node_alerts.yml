@@ -1,0 +1,12 @@
+groups:
+- name: node_alerts
+  rules:
+  - alert: UnusualContainers
+    expr: is_unusual_container==1
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: Unusual dockers are detected
+      console: Detect successfully
+
